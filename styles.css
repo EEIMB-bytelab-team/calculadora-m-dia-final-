@@ -1,0 +1,120 @@
+
+:root {
+    /* Tema claro (padrão) */
+    --bg: #f4f4f4;
+    --card-bg: #fff;
+    --text-primary: #222;
+    --text-sec: #444;
+    --input-bg: #fff;
+    --input-color: #000;
+    --button-bg: #3b82f6;
+    --button-hover: #2563eb;
+}
+body.dark {
+    /* Tema escuro */
+    --bg: #1f2937;
+    --card-bg: #111827;
+    --text-primary: #f1f5f9;
+    --text-sec: #d1d5db;
+    --input-bg: #374151;
+    --input-color: #f9fafb;
+    --button-bg: #6366f1;
+    --button-hover: #4f46e5;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+main {
+    background: var(--card-bg);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background 0.3s;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+}
+
+p {
+    text-align: center;
+    color: var(--text-sec);
+    font-size: 0.95rem;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    background: var(--input-bg);
+    color: var(--input-color);
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: background 0.3s, color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+
+.erro {
+    color: #dc2626;
+    font-size: 0.85rem;
+    margin-top: 3px;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+    min-height: 1.4em;
+}
+
+.aprovado { color: #16a34a; }
+.reprovado { color: #dc2626; }
+.atencao { color: #d97706; }
+
+#toggle-theme {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: var(--button-bg);
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+#toggle-theme:hover { background: var(--button-hover); }
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.3rem; }
+}
