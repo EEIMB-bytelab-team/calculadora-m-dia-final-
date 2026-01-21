@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quanto preciso no Exame Final?</title>
+<link rel="stylesheet" href="styles.css">
+<meta name="description" content="Calculadora para saber a nota mínima necessária no Exame Final com base na média semestral.">
+<meta name="keywords" content="exame final, nota mínima, média semestral, cálculo de nota, aprovação escolar">
+<script src="script.js"></script>
+</head>
+<body>
+<button id="toggle-theme">🌙 Modo escuro</button>
+
+<main>
+    <h1>Quanto preciso no Exame Final?</h1>
+    <p>Digite sua <b>Média Semestral (M)</b> para saber se precisa de exame e qual nota mínima.</p>
+
+    <label for="media">Média Semestral (M):</label>
+    <input type="number" id="media" step="0.01" min="0" max="10" placeholder="Digite sua média">
+    <div id="erro-media" class="erro"></div>
+
+    <div id="resultado" aria-live="polite"></div>
+</main>
+</body>
+</html>
